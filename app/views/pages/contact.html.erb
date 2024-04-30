@@ -1,0 +1,38 @@
+
+<div class="container">
+  <h1>Contact</h1>
+
+  <div class="contact-details">
+    <h2>Contact Details</h2>
+    <p>Email: example@example.com</p>
+    <p>Phone: +1 (123) 456-7890</p>
+  </div>
+
+  <div class="social-media">
+    <h2>Social Media</h2>
+    <p>
+      <a href="https://www.linkedin.com/in/robertherjavec/">LinkedIn</a>
+    </p>
+  </div>
+
+  <div class="contact-form">
+    <h2>Contact Form</h2>
+    <%= form_for :contact, url: contact_path do |f| %>
+      <div class="field">
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+      </div>
+      <div class="field">
+        <%= f.label :email %>
+        <%= f.email_field :email %>
+      </div>
+      <div class="field">
+        <%= f.label :message %>
+        <%= f.text_area :message %>
+      </div>
+      <div class="actions">
+        <%= f.submit "Send Message" %>
+      </div>
+    <% end %>
+  </div>
+</div>
